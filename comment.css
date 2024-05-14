@@ -1,0 +1,227 @@
+body{
+  overflow-y: hidden;
+   overflow-x: hidden;
+    background-color: white; /* 배경색을 흰색으로 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    -webkit-user-select:none; /* 드래그 방지 */
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+  
+  .pre-container {
+      display: flex; /* Flexbox를 사용하여 내부 요소들을 가로로 배열 */
+      
+  }
+
+  .pre-container pre {
+      margin: 0; /* 기본 마진 제거 */
+  }
+
+/* cheer blink */
+
+  .blink {
+      animation: blink-animation 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink-animation {
+      to {
+          visibility: hidden;
+      }
+  }
+
+/* 라디오 색상 설정 */
+
+[type="radio"] {
+  accent-color: rgb(0, 0, 0);
+}
+
+
+@keyframes blink-animation {
+to {
+    visibility: hidden;
+}
+}
+
+
+/* 코멘트 팝업 */
+.comment {
+   position: absolute;
+  padding: 3px;
+  background-color: rgba(219, 228, 255, 0.8);
+  color:rgb(0, 0, 0);
+  font-weight: 700;
+  font-size:1.0em;
+}
+
+
+/* 버튼 떨림 */
+
+.button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+
+.button1:hover {
+  /* 호버 효과: 마우스를 가져다 댔을 때 */
+  animation: shake 0.5s ease;
+  animation-iteration-count: infinite;
+}
+
+ 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* 눈 */
+.snowflake {
+  color: rgb(125, 125, 125);
+  opacity: 30%;
+  position: absolute;
+  top: 0;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-5vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform:
+      rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform:
+      rotateX(0deg) rotateY(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform:
+      rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform:
+      rotateX(0deg) rotateY(360deg);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform:
+      rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform:
+      rotateX(0deg) rotateY(360deg);
+  }
+}
+
+@keyframes animate3r {
+  0% {
+    transform:
+      rotateX(0deg) rotateY(180deg);
+  }
+
+  100% {
+    transform:
+      rotateX(0deg) rotateY(-180deg);
+  }
+}
+
+@keyframes animate2r {
+  0% {
+    transform:
+      rotateX(0deg) rotateY(180deg);
+  }
+
+  100% {
+    transform:
+      rotateX(0deg) rotateY(-180deg);
+  }
+}
+
+@keyframes animater {
+  0% {
+    transform:
+      rotateX(0deg) rotateY(180deg);
+  }
+
+  100% {
+    transform:
+      rotateX(0deg) rotateY(-180deg);
+  }
+}
+
+.rotate45 {
+  transform: rotateX(45deg);
+}
+
+
+
+#submitBtn:hover strong {
+  color: rgb(31, 28, 202);
+}
+
+
+/* 강이지 움직임 */
+@keyframes tilt {
+  0% { transform: rotate(0deg); } /* 시작 지점 */
+  50% { transform: rotate(5deg); } /* 중간 지점에서 약간 회전 */
+  100% { transform: rotate(0deg); } /* 다시 원래 각도로 회전 */
+}
+
+.dog {
+  animation: tilt 0.5s steps(1) infinite alternate; /* tilt 키프레임을 1초 간격으로 무한히 반복하고, 번갈아가며 실행하며 2단계로 분할 */
+}
+
+/* 그라데이션 */
+body::before {
+content: '';
+position: fixed;
+top: 0;
+left: 0;
+width: 500px; /* 왼쪽 끝 그라데이션 너비 조절 */
+height: 100%;
+background: linear-gradient(to right,rgba(219, 228, 255, 0.8), rgba(255, 255, 255, 0)); /* 투명에서 흰색으로 그라데이션 */
+z-index: 1; /* 다른 요소 위에 오도록 설정 */
+}
+
+body::after {
+content: '';
+position: fixed;
+top: 0;
+right: 0;
+width: 500px; /* 오른쪽 끝 그라데이션 너비 조절 */
+height: 100%;
+background: linear-gradient(to left, rgba(219, 228, 255, 0.8), rgba(255, 255, 255, 0)); /* 흰색에서 투명으로 그라데이션 */
+z-index: 1; /* 다른 요소 위에 오도록 설정 */
+}

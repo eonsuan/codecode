@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codebabies</title>
+    <link rel="stylesheet" href="comment.css">
+    <style>
+        
+
+        body {
+            width: auto;
+            background: rgb(225, 219, 219, 0.1);
+            text-align: center;
+            display: grid;
+            height: 100vh;
+            place-items: center center;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+    
+        #window {
+            white-space: pre-wrap;
+            word-break: normal;
+            font-family: monospace;
+            font-size: 1em;
+            font-style: bold;
+            width: 90vw;
+        }
+
+        #commentInput,
+    #submitBtn {
+        display: inline-block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="pre-container">
+    <pre class="blink">
+           _..._                                                                
+        .-'_..._''.                                                             
+      .' .'      '.\  .              __.....__           __.....__              
+     / .'           .'|          .-''         '.     .-''         '.            
+    . '             | |         /     .-''"'-.  `.  /     .-''"'-.  `. .-,.--.  
+    | |             | |        /     /________\   \/     /________\   \|  .-. | 
+    | |             | | .'''-. |                  ||                  || |  | | 
+    . '             | |/.'''. \\    .-------------'\    .-------------'| |  | | 
+     \ '.          .|  /    | | \    '-.____...---. \    '-.____...---.| |  '-  
+      '. `._____.-'/| |     | |  `.             .'   `.             .' | |      
+        `-.______ / | |     | |    `''-...... -'       `''-...... -'   | |      
+                 `  | '.    | '.                                       |_|      
+                    '---'   '---'                                               
+    </pre>
+    <pre>                                               
+                                          
+/|                  /|                    
+||                  ||    .-.          .- 
+||                  ||     \ \        / / 
+||  __        __    ||  __  \ \      / /  
+||/'__ '.  .:--.'.  ||/'__ '.\ \    / /   
+|:/`  '. '/ |   \ | |:/`  '. '\ \  / /    
+||     | |`" __ | | ||     | | \ `  /     
+||\    / ' .'.''| | ||\    / '  \  /      
+|/\'..' / / /   | |_|/\'..' /   / /       
+'  `'-'`  \ \._,\ '/'  `'-'`|`-' /        
+           `--'  `"          '..'         
+    </pre>
+</div>
+
+<div class="dog">
+    <pre>
+        /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／　　 　<input type="radio" checked>　<input type="radio" checked> 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　亠 ノ 　
+   　 U￣U￣￣￣U￣￣U
+   </pre>
+</div>
+
+   <div style="display: inline-block;">
+    <input type="text" id="commentInput" placeholder="당신의 코드에게 한 마디" maxlength="30">&nbsp;&nbsp;&nbsp;<span id="submitBtn"><a target="_blank"><h5><strong>전달</strong></h5></a></span>
+</div>
+
+
+   
+   <button class="button1" onclick="location.href='../index.html'">홈으로</button>
+
+   <script src="./comment.js"></script>
+
+
+</body>

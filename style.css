@@ -1,0 +1,271 @@
+body{
+  overflow-y: hidden;
+   overflow-x: hidden;
+    background-color: white; /* 배경색을 흰색으로 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    -webkit-user-select:none; /* 드래그 방지 */
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
+h5 {
+  font-size: 0.7em; /* 글꼴 크기를 조절합니다 */
+  color: #333; /* 글꼴 색상을 지정합니다 */
+  font-weight: bold; /* 글꼴 두께를 설정합니다 */
+  text-transform: uppercase; 
+}
+
+pre {
+
+    display: block;
+  
+    font-family: monospace;
+  
+    white-space: pre;
+  
+    margin: 1em 0;
+  
+  }
+
+
+  /* 라디오 색상 설정 */
+
+  [type="radio"] {
+    accent-color: rgb(0, 0, 0);
+  }
+
+
+@keyframes blink-animation {
+  to {
+      visibility: hidden;
+  }
+}
+
+
+
+  /* 버튼 떨림 */
+
+  .button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .introducebutton:hover {
+      /* 호버 효과: 마우스를 가져다 댔을 때 */
+      animation: shake 0.5s ease;
+      animation-iteration-count: infinite;
+    }
+
+  .button1:hover {
+    /* 호버 효과: 마우스를 가져다 댔을 때 */
+    animation: shake 0.5s ease;
+    animation-iteration-count: infinite;
+  }
+
+  .button2:hover {
+    /* 호버 효과: 마우스를 가져다 댔을 때 */
+    animation: shake 0.5s ease;
+    animation-iteration-count: infinite;
+  }
+
+  .button3:hover {
+    /* 호버 효과: 마우스를 가져다 댔을 때 */
+    animation: shake 0.5s ease;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+  /* 움직이는 강아지 */
+
+  @keyframes move {
+    0% {
+        transform: translateX(0) scaleX(-1); /* 반대 방향으로 최대치 이동 */
+    }
+    49% {
+        transform: translateX(calc(240% - 50vw)) scaleX(-1); /* 순간적으로 좌우 반전 */
+    }
+    50% {
+        transform: translateX(calc(240% - 50vw)) scaleX(1); /* 오른쪽으로 최대치 이동 */
+    }
+    100% {
+        transform: translateX(0) scaleX(1); /* 원래 방향으로 시작 */
+    }
+}
+
+
+/* 이동하는 div를 감싸는 div에 애니메이션 적용 */
+.wrapper {
+    animation: move 8s steps(20) infinite; /* 8초 간격으로 반복 */
+}
+
+  /* 눈 */
+  .snowflake {
+    color: rgb(125, 125, 125);
+    opacity: 30%;
+    position: absolute;
+    top: 0;
+    animation: snowfall linear infinite;
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-5vh);
+    }
+    100% {
+      transform: translateY(110vh);
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      transform:
+        rotateX(0deg) rotateY(0deg);
+    }
+  
+    100% {
+      transform:
+        rotateX(0deg) rotateY(360deg);
+    }
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform:
+        rotateX(0deg) rotateY(0deg);
+    }
+  
+    100% {
+      transform:
+        rotateX(0deg) rotateY(360deg);
+    }
+  }
+  
+  @keyframes animate3 {
+    0% {
+      transform:
+        rotateX(0deg) rotateY(0deg);
+    }
+  
+    100% {
+      transform:
+        rotateX(0deg) rotateY(360deg);
+    }
+  }
+  
+  @keyframes animate3r {
+    0% {
+      transform:
+        rotateX(0deg) rotateY(180deg);
+    }
+  
+    100% {
+      transform:
+        rotateX(0deg) rotateY(-180deg);
+    }
+  }
+  
+  @keyframes animate2r {
+    0% {
+      transform:
+        rotateX(0deg) rotateY(180deg);
+    }
+  
+    100% {
+      transform:
+        rotateX(0deg) rotateY(-180deg);
+    }
+  }
+  
+  @keyframes animater {
+    0% {
+      transform:
+        rotateX(0deg) rotateY(180deg);
+    }
+  
+    100% {
+      transform:
+        rotateX(0deg) rotateY(-180deg);
+    }
+  }
+  
+  .rotate45 {
+    transform: rotateX(45deg);
+  }
+
+
+  /* 웹 설명 */
+  .topic {
+    position: relative;
+    border-radius: 60px;
+    padding: 0px 0px; /* 수정: padding 값을 콤마 대신에 공백으로 수정 */
+  }
+  .topic span{
+    position: center;
+    text-align: center;
+    line-height: 120%;
+    top: 100%; /* 추가: 상위 요소 중앙 정렬 */
+    left: 100%; /* 추가: 상위 요소 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 추가: 요소를 수직 및 수평으로 중앙 정렬 */
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  .topic:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+  p{
+    font-weight: 70;
+  }
+
+
+
+/* 그라데이션 */
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px; /* 왼쪽 끝 그라데이션 너비 조절 */
+  height: 100%;
+  background: linear-gradient(to right,rgba(184, 202, 255, 0.8), rgba(255, 255, 255, 0)); /* 투명에서 흰색으로 그라데이션 */
+  z-index: 1; /* 다른 요소 위에 오도록 설정 */
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px; /* 오른쪽 끝 그라데이션 너비 조절 */
+  height: 100%;
+  background: linear-gradient(to left,  rgba(184, 202, 255, 0.8), rgba(255, 255, 255, 0)); /* 흰색에서 투명으로 그라데이션 */
+  z-index: 1; /* 다른 요소 위에 오도록 설정 */
+}
+
+/* 물음표 */
+#special:hover {
+    color: rgb(31, 28, 202); /* 마우스를 가져다 대면 글자색을 빨간색으로 변경 */
+}
+

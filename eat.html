@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codebabies</title>
+    <link href="eat.css" rel="stylesheet">
+    <style>
+        
+        body {
+            width: auto;
+            background: rgb(225, 219, 219, 0.1);
+            text-align: center;
+            display: grid;
+            height: 100vh;
+            place-items: center center;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+    
+        #window {
+            white-space: pre-wrap;
+            word-break: normal;
+            font-family: monospace;
+            font-size: 1em;
+            font-style: bold;
+            width: 90vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pre-container">
+        <pre class="blink">                                                                                    
+                                                         
+                                                _______       
+               __.....__           __.....__    \  ___ `'.    
+     _.._  .-''         '.     .-''         '.   ' |--.\  \   
+   .' .._|/     .-''"'-.  `.  /     .-''"'-.  `. | |    \  '  
+   | '   /     /________\   \/     /________\   \| |     |  ' 
+ __| |__ |                  ||                  || |     |  | 
+|__   __|\    .-------------'\    .-------------'| |     ' .' 
+   | |    \    '-.____...---. \    '-.____...---.| |___.' /'  
+   | |     `.             .'   `.             .'/_______.'/   
+   | |       `''-...... -'       `''-...... -'  \_______|/    
+   | |                                                        
+   |_|                                                        
+     
+</pre>        
+
+                      
+<pre>
+                                                  
+                                          
+/|                  /|                    
+||                  ||    .-.          .- 
+||                  ||     \ \        / / 
+||  __        __    ||  __  \ \      / /  
+||/'__ '.  .:--.'.  ||/'__ '.\ \    / /   
+|:/`  '. '/ |   \ | |:/`  '. '\ \  / /    
+||     | |`" __ | | ||     | | \ `  /     
+||\    / ' .'.''| | ||\    / '  \  /      
+|/\'..' / / /   | |_|/\'..' /   / /       
+'  `'-'`  \ \._,\ '/'  `'-'`|`-' /        
+           `--'  `"          '..'         
+    </pre>
+    </div>
+    
+    <pre id="dog" style="width: 200px; height: 100px;">
+        /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／　  　<input type="radio" checked>　<input type="radio" checked> 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　亠 ノ 　
+   　 U￣U￣￣￣U￣￣U
+   </pre>
+
+   
+   <form action="#" id="foodForm">
+    <label for="food"></label>
+    (( <select name="languages" id="lang" onchange="selectFood()">
+      <option value="팔라펠">🧆</option>
+      <option value="브로콜리">🥦</option>
+      <option value="레몬">🍋</option>
+      <option value="펜케이크">🥞</option>
+      <option value="계란">🥚</option>
+      <option value="아이스크림">🍨</option>
+      <option value="포츈쿠키">🥠</option>
+      <option value="고기">🍖</option>
+    </select> ))
+    <br> <br>
+    <input type="submit" value="접시 건네기"/>
+
+  </form>
+  
+<button class="button1" onclick="location.href='../index.html'">홈으로</button>
+
+<script>
+    function selectFood() {
+        var lang = document.getElementById('lang');
+        var selectedOption = lang.options[lang.selectedIndex].value;
+    
+    // 선택된 옵션에 따라 임시 내용을 반환
+switch(selectedOption) {
+    case '팔라펠':
+        return `
+        <pre style="max-width: 100%; word-wrap: break-word;">
+        /)─―ヘ
+   　　　⎽／　∪　  　＼
+   　   ／　　∪ <input type="radio" checked>　<input type="radio" checked> 丶
+      　｜   　    　▼　 | 
+   　    ｜　　　 　　　亠 ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    case '브로콜리':
+        return `
+        <pre>
+         /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／　   　⌒　  ⌒ 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　亠 ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    case '레몬':
+        return `
+        <pre>
+            <pre>
+         /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／　   　∧ 　 ∧ 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　亠 ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    case '펜케이크':
+        return `
+        <pre>
+         /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／　   　🖤 　🖤 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　亠 ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    case '아이스크림':
+        return `
+        <pre>
+         /)─―ヘ
+   　　　⎽／　　　ノヽ、＼
+   　   ／　  　<input type="radio" checked>　<input type="radio" checked> 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　亠 ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    case '포츈쿠키':
+        return `
+        <pre>
+         /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／  ╬　<input type="radio" checked>　<input type="radio" checked> 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　д ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    case '고기':
+        return `
+        <pre>
+         /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／　   　˃ 　 ˂ 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　⩌ ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    case '계란':
+        return `
+        <pre>
+         /)─―ヘ
+   　　　⎽／　　　  　＼
+   　   ／　   　￣　 ￣ 丶
+      　｜　　　　　　　▼　 | 
+   　    ｜　　　 　　　ー ノ 　
+   　 U￣U￣￣￣U￣￣U
+        </pre>`;
+    // 다른 옵션들에 대한 내용 변경 추가
+}
+// 기본적으로는 아무것도 반환하지 않음
+return '';
+}
+
+document.getElementById('foodForm').addEventListener('submit', function(event) {
+event.preventDefault(); // 기본 제출 동작 방지
+var dog = document.getElementById('dog');
+var originalContent = dog.innerHTML; // 원래 내용 저장
+var newContent = selectFood(); // 선택된 음식에 따른 새로운 내용
+
+// 새로운 내용으로 변경
+dog.innerHTML = newContent;
+
+// 2초 후에 원래 내용으로 되돌리기
+setTimeout(function() {
+    dog.innerHTML = originalContent;
+}, 900);
+});
+</script>
+<script src="eat.js"></script>
+
+</body>
+</html>
